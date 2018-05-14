@@ -17,6 +17,8 @@ import { ContactComponent } from './views/contact/contact.component';
 
 //Services
 import { ProductsService } from './services/products.service';
+import { EmailService } from './services/email.service';
+import { PageNotFoundComponent } from './views/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,8 @@ import { ProductsService } from './services/products.service';
     AboutComponent,
     HomeComponent,
     ProductsComponent,
-    ContactComponent
+    ContactComponent,
+    PageNotFoundComponent
   ],
   imports: [
     HttpModule,
@@ -35,7 +38,8 @@ import { ProductsService } from './services/products.service';
     AppRoutingModule
   ],
   providers: [
-    ProductsService
+    ProductsService,
+    EmailService
   ],
   bootstrap: [ AppComponent ],
   schemas: [ NO_ERRORS_SCHEMA ]
