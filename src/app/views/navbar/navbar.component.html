@@ -1,18 +1,24 @@
 
 <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark default-color ie-nav" [containerInside]="true">
     <logo>
-        <a class="logo navbar-brand" href="#"><strong>tr3Designs</strong></a>    
+        <a class="logo navbar-brand" routerLink="/"><strong>tr3Designs</strong></a>    
     </logo>
     <links>
         <ul class="navbar-nav mr-auto">
             <li class="nav-item waves-light" mdbWavesEffect mdbRippleRadius mdbTooltip="What is tr3Designs?" placement="bottom">
-                <a class="nav-link">About</a>
+                <a class="nav-link" routerLink="/about">About</a>
             </li>
             <li class="nav-item waves-light" mdbWavesEffect mdbRippleRadius mdbTooltip="See what I've created." placement="bottom">
-                <a class="nav-link">Products</a>
+                <a class="nav-link" routerLink="/products">Products</a>
+            </li>
+            <li class="nav-item waves-light" mdbWavesEffect mdbRippleRadius mdbTooltip="Get in touch with me." placement="bottom">
+                <a class="nav-link" routerLink="/contact">Contact</a>
             </li>
         </ul>
         <ul class="navbar-nav nav-flex-icons">
+            <li class="nav-item waves-light" mdbWavesEffect mdbRippleRadius mdbTooltip="Facebook" placement="bottom">
+                <a href="https://www.facebook.com/Tr3Designs-181656155720559/" class="nav-link"><i class="fa fa-facebook"></i></a>
+            </li>
             <li class="nav-item waves-light" mdbWavesEffect mdbRippleRadius mdbTooltip="Instagram" placement="bottom">
                 <a href="https://www.instagram.com/tr3.designs/" class="nav-link"><i class="fa fa-instagram"></i></a>
             </li>
