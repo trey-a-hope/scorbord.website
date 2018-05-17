@@ -1,12 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../../services/products.service';
 import { Product } from '../../models/stripe/product';
+import {NgModule} from '@angular/core';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.scss']
 })
+
 export class ProductsComponent implements OnInit {
   products: Array<Product> = new Array<Product>();
 
@@ -15,6 +18,11 @@ export class ProductsComponent implements OnInit {
     p1.name = 'IGM Ashtray';
     p1.caption = 'Uniquely designed ashtray.'
     this.products.push(p1);
+    this.products.push(p1);
+    this.products.push(p1);
+    this.products.push(p1);
+    this.products.push(p1);
+
 
     var p2 = new Product;
     p2.name = 'Logo Tag';
@@ -23,7 +31,6 @@ export class ProductsComponent implements OnInit {
   }
 
   ngOnInit() {
-    
     // this.productsService.getProducts().subscribe(data => {
     //   this.products = data;
     // });

@@ -3,8 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
-
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 //Views
 import { NavbarComponent } from './views/navbar/navbar.component';
@@ -29,13 +29,14 @@ import { PageNotFoundComponent } from './views/page-not-found/page-not-found.com
     HomeComponent,
     ProductsComponent,
     ContactComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
   ],
   imports: [
     HttpModule,
     BrowserModule,
     MDBBootstrapModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [
     ProductsService,
