@@ -1,0 +1,28 @@
+<section id="about" class="animated fadeIn" style="padding: 30px 0">
+  <div class="container">
+    <div class="row">
+          <div class="col">
+              <h1 class="red-text animated zoomInRight"><strong>Admin</strong></h1>
+          </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col">
+            <h4 class="animated zoomInRight"><strong>Customers ({{ customers.length }})</strong></h4>
+            <table class="table">
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>FCM Token</th>
+              </tr>
+              <tr *ngFor='let customer of customers; trackBy: index;'>
+                <td>{{ customer.name }} </td>
+                <td>{{ customer.email }}</td>
+                <td>{{ customer.fcmToken }}</td>
+              </tr>
+            </table>
+        </div>
+    </div>
+    <br>
+  </div>
+</section>

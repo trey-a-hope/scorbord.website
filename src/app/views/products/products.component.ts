@@ -3,6 +3,7 @@ import { ProductsService } from '../../services/products.service';
 import { Product } from '../../models/stripe/product';
 import {NgModule} from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { Jsonp } from '@angular/http';
 
 @Component({
   selector: 'app-products',
@@ -14,26 +15,20 @@ export class ProductsComponent implements OnInit {
   products: Array<Product> = new Array<Product>();
 
   constructor(private productsService : ProductsService) { 
-    var p1 = new Product;
-    p1.name = 'IGM Ashtray';
-    p1.caption = 'Uniquely designed ashtray.'
-    this.products.push(p1);
-    this.products.push(p1);
-    this.products.push(p1);
-    this.products.push(p1);
-    this.products.push(p1);
-
-
-    var p2 = new Product;
-    p2.name = 'Logo Tag';
-    p2.caption = 'Tag for shoe laces.'
-    this.products.push(p2);
   }
 
   ngOnInit() {
-    // this.productsService.getProducts().subscribe(data => {
-    //   this.products = data;
+    // this.productsService.testGetProducts().subscribe(products => {
+    //   this.products = products;
     // });
+
+    this.productsService.getProducts().subscribe(products => {
+      this.products = products;
+    });
+  }
+
+  openProductDetail(product: Product){
+    alert('Product details, coming soon...');
   }
 
 }

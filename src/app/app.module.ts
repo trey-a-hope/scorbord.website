@@ -19,6 +19,11 @@ import { ContactComponent } from './views/contact/contact.component';
 import { ProductsService } from './services/products.service';
 import { EmailService } from './services/email.service';
 import { PageNotFoundComponent } from './views/page-not-found/page-not-found.component';
+import { AdminComponent } from './views/admin/admin.component';
+
+import { AngularFireModule } from 'angularfire2';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -30,13 +35,16 @@ import { PageNotFoundComponent } from './views/page-not-found/page-not-found.com
     ProductsComponent,
     ContactComponent,
     PageNotFoundComponent,
+    AdminComponent,
   ],
   imports: [
     HttpModule,
     BrowserModule,
     MDBBootstrapModule.forRoot(),
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule
   ],
   providers: [
     ProductsService,

@@ -31,6 +31,7 @@ export class ContactComponent implements OnInit {
   }
 
   onSubmit() {
+
       let formIsValid     : Boolean           = true;
 
       let fullNameControl : AbstractControl   = this.contactForm.controls.fullName;

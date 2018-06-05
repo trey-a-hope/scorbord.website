@@ -6,11 +6,12 @@
         <div class="row">
             <div class="col s12 m12 l12 xl4" style="padding-top: 20px" *ngFor='let product of products; trackBy: index;'>
                 <div class="card">
-                    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/43.jpg" alt="Card image cap">
+                    <img class="card-img-top" [src]="product.imageUrls[0]" alt="Card image cap">
                     <div class="card-body">
-                        <h4 class="card-title"><a>{{ product.name }}</a></h4>
+                        <h2 class="card-title"><a>{{ product.name }}</a></h2>
+                        <h5>Added {{ product.created | date }}</h5>
                         <p class="card-text">{{ product.caption }}</p>
-                        <a href="#" class="btn btn-primary">View Product Details</a>
+                        <button (click)="openProductDetail(product)" class="btn btn-primary">View Product Details</button>
                     </div>
                 </div>      
             </div>

@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './views/about/about.component';
 import { ProductsComponent } from './views/products/products.component';
 import { ContactComponent } from './views/contact/contact.component';
+import { AdminComponent } from './views/admin/admin.component';
 import { PageNotFoundComponent } from './views/page-not-found/page-not-found.component';
 
 const routes: Routes = [ 
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'products', component: ProductsComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'admin', component: AdminComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
 
