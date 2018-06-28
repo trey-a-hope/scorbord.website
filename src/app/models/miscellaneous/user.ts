@@ -3,6 +3,7 @@ export class User {
     name: String;
     fcmToken: String;
     email: String;
+    customerId: String;
 }
 
 

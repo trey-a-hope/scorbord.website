@@ -13,11 +13,13 @@
               <tr>
                 <th>Name</th>
                 <th>Email</th>
+                <th>Customer ID</th>
                 <th>FCM Token</th>
               </tr>
               <tr *ngFor='let customer of customers; trackBy: index;'>
                 <td>{{ customer.name }} </td>
                 <td>{{ customer.email }}</td>
+                <td>{{ customer.customerId }}</td>
                 <td>{{ customer.fcmToken }}</td>
               </tr>
             </table>

@@ -21,6 +21,7 @@ export class AdminComponent implements OnInit {
         customer.name = userDoc.get('firstName') + ' ' + userDoc.get('lastName');
         customer.email = userDoc.get('email');
         customer.fcmToken = userDoc.get('fcmToken');
+        customer.customerId = userDoc.get('customerId');
         this.customers.push(customer);
       })
     })

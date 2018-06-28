@@ -18,13 +18,13 @@ export class ProductsComponent implements OnInit {
   }
 
   ngOnInit() {
-    // this.productsService.testGetProducts().subscribe(products => {
-    //   this.products = products;
-    // });
-
-    this.productsService.getProducts().subscribe(products => {
+    this.productsService.testGetProducts().subscribe(products => {
       this.products = products;
     });
+
+    // this.productsService.getProducts().subscribe(products => {
+    //   this.products = products;
+    // });
   }
 
   openProductDetail(product: Product){
