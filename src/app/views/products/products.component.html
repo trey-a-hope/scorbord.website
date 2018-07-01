@@ -1,10 +1,24 @@
 <section id="about" class="animated fadeIn" style="padding: 30px 0">
     <div class="container">
-        <h1 class="red-text animated zoomInRight"><strong>Products</strong></h1>
+        <h1 class="red-text animated zoomInRight"><strong>Products ({{ products.length }})</strong></h1>
         <hr>
         <h4 class="animated zoomInRight">See what I've created.</h4>
         <div class="row">
-            <div class="col s12 m12 l12 xl4" style="padding-top: 20px" *ngFor='let product of products; trackBy: index;'>
+            <table class="table">
+                <tr>
+                    <th></th>
+                    <th>Name</th>
+                    <th>Caption</th>
+                    <th>Date Created</th>
+                </tr>
+                <tr *ngFor='let product of products; trackBy: index;' (click)="openProductDetail(product)" class="cursor-pointer">
+                    <td><img [src]="product.imageUrls[0]" height="50px" width="50px"></td>
+                    <td>{{ product.name }}</td>
+                    <td>{{ product.caption }}</td>
+                    <td>{{ product.created | date  }}</td>
+                </tr>
+            </table>
+            <!-- <div class="col s4 m4 l4 xl4" style="padding-top: 20px" *ngFor='let product of products; trackBy: index;'>
                 <div class="card">
                     <img class="card-img-top" [src]="product.imageUrls[0]" alt="Card image cap">
                     <div class="card-body">
@@ -14,7 +28,8 @@
                         <button (click)="openProductDetail(product)" class="btn btn-primary">View Product Details</button>
                     </div>
                 </div>      
-            </div>
+            </div> -->
+            
         </div>
     </div>
 </section>

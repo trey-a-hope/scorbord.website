@@ -1,0 +1,32 @@
+<section id="product-detail" class="animated fadeIn" style="padding: 30px 0">
+    <div class="container">
+        <h1 class="red-text text-center animated zoomInRight"><strong>{{ product.name }}</strong></h1>
+        <br>
+        <div class="row">
+            <div class="col s6 m6 l6 xl6">
+                <img [src]="product.imageUrls[0]" width="500px" height="500px">
+            </div>
+            <div class="col s6 m6 l6 xl6">
+                <table class="table">
+                    <!-- Caption -->
+                    <tr>
+                        <td><i class="fa fa-sticky-note-o" aria-hidden="true"></i><strong> Caption</strong></td>
+                        <td>{{ product.caption }}</td>
+                    </tr>
+                    <!-- Creation -->
+                    <tr>
+                        <td><i class="fa fa-calendar" aria-hidden="true"></i><strong> Created</strong></td>
+                        <td>{{ product.created | date  }}</td>
+                    </tr>
+                    <!-- Price -->
+                    <tr>
+                        <td><i class="fa fa-dollar" aria-hidden="true"></i><strong> Price</strong></td>
+                        <td>{{ product.price / 100| currency  }}</td>
+                    </tr>
+                </table>
+                <button class="btn teal" (click)='purchase()'>Purchase (Coming Soon)</button>
+                <p>For now, you can purchase products throught the mobile app, available for iOS and Android.</p>
+            </div>
+        </div>
+    </div>
+</section>

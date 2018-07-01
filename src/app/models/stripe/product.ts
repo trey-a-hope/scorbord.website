@@ -12,6 +12,7 @@ export class Product {
     updated: Date;
     skus: Array<Sku>;
     packageDimensions: PackageDimensions;
+    price: number;
 }
 
 class PackageDimensions {

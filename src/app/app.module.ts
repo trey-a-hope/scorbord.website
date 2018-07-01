@@ -14,12 +14,15 @@ import { AboutComponent } from './views/about/about.component';
 import { HomeComponent } from './views/home/home.component';
 import { ProductsComponent } from './views/products/products.component';
 import { ContactComponent } from './views/contact/contact.component';
+import { PageNotFoundComponent } from './views/page-not-found/page-not-found.component';
+import { AdminComponent } from './views/admin/admin.component';
+import { ProductDetailComponent } from './views/product-detail/product-detail.component';
 
 //Services
 import { ProductsService } from './services/products.service';
 import { EmailService } from './services/email.service';
-import { PageNotFoundComponent } from './views/page-not-found/page-not-found.component';
-import { AdminComponent } from './views/admin/admin.component';
+import { SharedService } from './services/shared.service';
+import { CookieService } from './services/cookie.service';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
@@ -36,6 +39,7 @@ import { environment } from '../environments/environment';
     ContactComponent,
     PageNotFoundComponent,
     AdminComponent,
+    ProductDetailComponent
   ],
   imports: [
     HttpModule,
@@ -48,7 +52,9 @@ import { environment } from '../environments/environment';
   ],
   providers: [
     ProductsService,
-    EmailService
+    EmailService,
+    SharedService,
+    CookieService
   ],
   bootstrap: [ AppComponent ],
   schemas: [ NO_ERRORS_SCHEMA ]

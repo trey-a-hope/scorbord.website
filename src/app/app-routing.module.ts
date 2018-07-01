@@ -7,11 +7,19 @@ import { ProductsComponent } from './views/products/products.component';
 import { ContactComponent } from './views/contact/contact.component';
 import { AdminComponent } from './views/admin/admin.component';
 import { PageNotFoundComponent } from './views/page-not-found/page-not-found.component';
+import { ProductDetailComponent } from './views/product-detail/product-detail.component';
 
 const routes: Routes = [ 
   { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'products', component: ProductsComponent },
+  { 
+    path: 'product-detail', 
+    component: ProductDetailComponent, 
+    data: {
+      product: 'test'
+    }
+  },
   { path: 'contact', component: ContactComponent },
   { path: 'admin', component: AdminComponent },
   { path: '**', component: PageNotFoundComponent },
