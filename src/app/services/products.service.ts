@@ -11,6 +11,8 @@ export class ProductsService {
   headers: Headers = new Headers({ 'Content-Type': 'application/json' }); // ... Set content type to JSON
   options: RequestOptions = new RequestOptions({ headers: this.headers }); // Create a request option
   apiKey: String = 'sk_live_o2l20PHfOYXaQCsAFPVdaNeC';
+  localProductsJsonUrl: string = 'http://localhost:4200/assets/mock-data/products.json';
+  remoteProductsJsonUrl: string = 'http://tr3designs.tr3umphant-designs.com/assets/mock-data/products.json';
 
   constructor(private http: Http) { }
 
@@ -29,7 +31,7 @@ export class ProductsService {
   }
 
   public testGetProducts(): Observable<Array<Product>> {
-    return this.http.get('http://localhost:4200/assets/mock-data/products.json').map((res: Response) => {
+    return this.http.get(this.remoteProductsJsonUrl).map((res: Response) => {
       let json = res.json();
       var products: Product[] = new Array<Product>();
 
